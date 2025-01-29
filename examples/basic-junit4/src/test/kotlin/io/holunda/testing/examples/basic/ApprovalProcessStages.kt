@@ -11,13 +11,13 @@ import io.holunda.testing.examples.basic.ApprovalProcessBean.Expressions.LOAD_AP
 import io.holunda.testing.examples.basic.ApprovalProcessBean.Variables.APPROVAL_DECISION
 import io.holunda.testing.examples.basic.ApprovalProcessBean.Variables.APPROVAL_STRATEGY
 import io.toolisticon.testing.jgiven.step
-import org.camunda.bpm.engine.test.assertions.bpmn.BpmnAwareTests.assertThat
-import org.camunda.bpm.engine.test.assertions.bpmn.BpmnAwareTests.externalTask
-import org.camunda.bpm.engine.test.mock.Mocks
-import org.camunda.bpm.engine.variable.Variables
-import org.camunda.bpm.engine.variable.Variables.putValue
-import org.camunda.community.mockito.DelegateExpressions.getJavaDelegateMock
-import org.camunda.community.mockito.DelegateExpressions.registerJavaDelegateMock
+import org.cibseven.bpm.engine.test.assertions.bpmn.BpmnAwareTests.assertThat
+import org.cibseven.bpm.engine.test.assertions.bpmn.BpmnAwareTests.externalTask
+import org.cibseven.bpm.engine.test.mock.Mocks
+import org.cibseven.bpm.engine.variable.Variables
+import org.cibseven.bpm.engine.variable.Variables.putValue
+import org.cibseven.community.mockito.DelegateExpressions.getJavaDelegateMock
+import org.cibseven.community.mockito.DelegateExpressions.registerJavaDelegateMock
 
 /**
  * Action stage for the test.

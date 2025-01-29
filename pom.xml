@@ -15,7 +15,7 @@
 
 
   <properties>
-    <camunda.version>7.22.0</camunda.version>
+    <cibseven.version>1.1.0</cibseven.version>
     <jgiven.version>2.0.1</jgiven.version>
     <assertj.version>3.27.3</assertj.version>
     <jgiven-kotlin.version>2.0.1.0</jgiven-kotlin.version>
@@ -66,19 +66,19 @@
         <version>${jgiven-kotlin.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-engine</artifactId>
-        <version>${camunda.version}</version>
+        <groupId>org.cibseven.bpm</groupId>
+        <artifactId>cibseven-engine</artifactId>
+        <version>${cibseven.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-bpm-assert</artifactId>
-        <version>${camunda.version}</version>
+        <groupId>org.cibseven.bpm</groupId>
+        <artifactId>cibseven-bpm-assert</artifactId>
+        <version>${cibseven.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-bpm-junit5</artifactId>
-        <version>${camunda.version}</version>
+        <groupId>org.cibseven.bpm</groupId>
+        <artifactId>cibseven-bpm-junit5</artifactId>
+        <version>${cibseven.version}</version>
       </dependency>
 
     </dependencies>

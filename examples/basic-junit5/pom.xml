@@ -14,8 +14,8 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.camunda.bpm.springboot</groupId>
-      <artifactId>camunda-bpm-spring-boot-starter-webapp</artifactId>
+      <groupId>org.cibseven.bpm.springboot</groupId>
+      <artifactId>cibseven-bpm-spring-boot-starter-webapp</artifactId>
     </dependency>
     <dependency>
       <groupId>com.h2database</groupId>
@@ -27,8 +27,8 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.camunda.community.mockito</groupId>
-      <artifactId>camunda-platform-7-mockito</artifactId>
+      <groupId>org.cibseven.community.mockito</groupId>
+      <artifactId>cibseven-platform-7-mockito</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -36,13 +36,13 @@
       <artifactId>jgiven-junit5</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.camunda.bpm.springboot</groupId>
-      <artifactId>camunda-bpm-spring-boot-starter-test</artifactId>
+      <groupId>org.cibseven.bpm.springboot</groupId>
+      <artifactId>cibseven-bpm-spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.camunda.bpm</groupId>
-      <artifactId>camunda-bpm-junit5</artifactId>
+      <groupId>org.cibseven.bpm</groupId>
+      <artifactId>cibseven-bpm-junit5</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>

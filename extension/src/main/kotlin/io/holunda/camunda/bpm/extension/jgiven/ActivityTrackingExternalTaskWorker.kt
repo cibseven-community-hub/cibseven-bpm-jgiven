@@ -1,9 +1,9 @@
 package io.holunda.camunda.bpm.extension.jgiven
 
-import org.camunda.bpm.engine.ExternalTaskService
-import org.camunda.bpm.engine.externaltask.LockedExternalTask
-import org.camunda.bpm.engine.variable.VariableMap
-import org.camunda.bpm.engine.variable.Variables
+import org.cibseven.bpm.engine.ExternalTaskService
+import org.cibseven.bpm.engine.externaltask.LockedExternalTask
+import org.cibseven.bpm.engine.variable.VariableMap
+import org.cibseven.bpm.engine.variable.Variables
 
 /**
  * Custom worker that is called directly. It will track the activities it was called for.

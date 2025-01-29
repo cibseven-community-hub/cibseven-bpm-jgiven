@@ -8,9 +8,9 @@ import io.toolisticon.testing.jgiven.AND
 import io.toolisticon.testing.jgiven.GIVEN
 import io.toolisticon.testing.jgiven.THEN
 import io.toolisticon.testing.jgiven.WHEN
-import org.camunda.bpm.engine.test.Deployment
-import org.camunda.bpm.engine.test.ProcessEngineRule
-import org.camunda.bpm.engine.variable.Variables.putValue
+import org.cibseven.bpm.engine.test.Deployment
+import org.cibseven.bpm.engine.test.ProcessEngineRule
+import org.cibseven.bpm.engine.variable.Variables.putValue
 import org.camunda.community.process_test_coverage.junit4.platform7.rules.TestCoverageProcessEngineRuleBuilder
 import org.junit.ClassRule
 import org.junit.Rule

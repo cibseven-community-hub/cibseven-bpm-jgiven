@@ -16,8 +16,8 @@ import io.toolisticon.testing.jgiven.GIVEN
 import io.toolisticon.testing.jgiven.THEN
 import io.toolisticon.testing.jgiven.WHEN
 import org.assertj.core.api.Assertions.assertThat
-import org.camunda.bpm.engine.test.Deployment
-import org.camunda.bpm.engine.variable.Variables.putValue
+import org.cibseven.bpm.engine.test.Deployment
+import org.cibseven.bpm.engine.variable.Variables.putValue
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.RegisterExtension
 import java.time.Period

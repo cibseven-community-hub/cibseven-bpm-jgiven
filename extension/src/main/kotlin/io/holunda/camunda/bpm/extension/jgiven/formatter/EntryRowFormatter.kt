@@ -6,7 +6,7 @@ import com.tngtech.jgiven.format.DefaultFormatter
 import com.tngtech.jgiven.format.ObjectFormatter
 import com.tngtech.jgiven.format.table.RowFormatter
 import com.tngtech.jgiven.format.table.RowFormatterFactory
-import org.camunda.bpm.engine.variable.value.TypedValue
+import org.cibseven.bpm.engine.variable.value.TypedValue
 
 /**
  * Formatter for single row, which is <code>Map.Entry</code>

@@ -1,7 +1,7 @@
 package io.holunda.testing.examples.basic
 
-import org.camunda.bpm.engine.ProcessEngine
-import org.camunda.bpm.engine.runtime.ProcessInstance
+import org.cibseven.bpm.engine.ProcessEngine
+import org.cibseven.bpm.engine.runtime.ProcessInstance
 import java.util.function.Supplier
 
 /**
@@ -90,7 +90,7 @@ class ApprovalProcessBean(
     this.processInstance = this.processEngine.runtimeService.startProcessInstanceByKey(
       KEY,
       approvalRequestId,
-      org.camunda.bpm.engine.variable.Variables
+      org.cibseven.bpm.engine.variable.Variables
         .putValue(Variables.ORIGINATOR, "kermit")
         .putValue(Variables.APPROVAL_REQUEST_ID, approvalRequestId)
     )

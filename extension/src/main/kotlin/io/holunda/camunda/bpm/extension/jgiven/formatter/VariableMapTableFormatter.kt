@@ -6,7 +6,7 @@ import com.tngtech.jgiven.format.ObjectFormatter
 import com.tngtech.jgiven.format.table.DefaultTableFormatter
 import com.tngtech.jgiven.format.table.TableFormatterFactory
 import com.tngtech.jgiven.report.model.DataTable
-import org.camunda.bpm.engine.variable.VariableMap
+import org.cibseven.bpm.engine.variable.VariableMap
 
 /**
  * Formatter for process variables.
