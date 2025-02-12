@@ -3,15 +3,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>io.holunda.testing</groupId>
-  <artifactId>camunda-bpm-jgiven-parent</artifactId>
+  <groupId>org.cibseven.community</groupId>
+  <artifactId>cibseven-bpm-jgiven-parent</artifactId>
   <version>2.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
 
   <name>${project.artifactId}</name>
-  <description>Camunda BPM JGiven</description>
-  <url>https://github.com/holunda-io/camunda-bpm-jgiven/</url>
+  <description>CIB seven BPM JGiven</description>
+  <url>https://github.com/cibseven-commuinty-hub/cibseven-bpm-jgiven/</url>
 
 
   <properties>
@@ -88,18 +88,22 @@
     <dependency>
       <groupId>org.jetbrains.kotlin</groupId>
       <artifactId>kotlin-stdlib</artifactId>
+      <version>${kotlin.version}</version>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.kotlin</groupId>
       <artifactId>kotlin-reflect</artifactId>
+      <version>${kotlin.version}</version>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.kotlin</groupId>
       <artifactId>kotlin-stdlib-jdk8</artifactId>
+      <version>${kotlin.version}</version>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.kotlin</groupId>
       <artifactId>kotlin-test</artifactId>
+      <version>${kotlin.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -472,6 +476,29 @@
 
   </profiles>
 
+    <repositories>
+        <repository>
+            <id>maven-central</id>
+            <name>Maven Central</name>
+            <url>https://repo1.maven.org/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <!-- Required for local builds by community users on master branch -->
+            <id>mvn-cibseven-public</id>
+            <name>CIB seven Public Repository</name>
+            <url>https://artifacts.cibseven.org/repository/public</url>
+        </repository>
+        <repository>
+            <!-- Required for local builds by developers on maintainance branches -->
+            <id>mvn-cibseven-snapshots</id>
+            <name>CIB seven Snapshots repository</name>
+            <url>https://artifacts.cibseven.org/repository/snapshots</url>
+        </repository>
+    </repositories> 
+
   <licenses>
     <license>
       <name>Apache License, Version 2.0</name>
@@ -481,16 +508,16 @@
   </licenses>
 
   <scm>
-    <connection>scm:git:git@github.com:holunda-io/camunda-bpm-jgiven.git</connection>
-    <url>scm:git:git@github.com:holunda-io/camunda-bpm-jgiven.git</url>
-    <developerConnection>scm:git:git@github.com:holunda-io/camunda-bpm-jgiven.git</developerConnection>
+    <connection>scm:git:git@github.com:cibseven-commuinty-hub/cibseven-bpm-jgiven.git</connection>
+    <url>scm:git:git@github.com:cibseven-commuinty-hub/cibseven-bpm-jgiven.git</url>
+    <developerConnection>scm:git:git@github.com:cibseven-commuinty-hub/cibseven-bpm-jgiven.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
 
   <distributionManagement>
     <site>
       <id>README</id>
-      <url>https://github.com/holunda-io/camunda-bpm-jgiven</url>
+      <url>https://github.com/cibseven-commuinty-hub/cibseven-bpm-jgiven</url>
     </site>
     <snapshotRepository>
       <id>ossrh</id>

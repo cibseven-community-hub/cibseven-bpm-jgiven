@@ -4,12 +4,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>io.holunda.testing</groupId>
-    <artifactId>camunda-bpm-jgiven-examples</artifactId>
+    <groupId>org.cibseven.community</groupId>
+    <artifactId>cibseven-bpm-jgiven-examples</artifactId>
     <version>2.0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>camunda-bpm-jgiven-examples-basic-junit5</artifactId>
+  <artifactId>cibseven-bpm-jgiven-examples-basic-junit5</artifactId>
   <packaging>jar</packaging>
 
   <dependencies>
@@ -46,14 +46,14 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>io.holunda.testing</groupId>
-      <artifactId>camunda-bpm-jgiven</artifactId>
+      <groupId>org.cibseven.community</groupId>
+      <artifactId>cibseven-bpm-jgiven</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.camunda.community.process_test_coverage</groupId>
-      <artifactId>camunda-process-test-coverage-junit5-platform-7</artifactId>
-      <version>${camunda-process-test-coverage.version}</version>
+      <groupId>org.cibseven.community.process_test_coverage</groupId>
+      <artifactId>process-test-coverage-junit5-platform-7</artifactId>
+      <version>${cibseven-process-test-coverage.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
