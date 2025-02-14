@@ -25,7 +25,7 @@ Add the following dependency to your Maven pom:
 <dependency>
   <groupId>org.cibseven.community</groupId>
   <artifactId>cibseven-bpm-jgiven</artifactId>
-  <version>1.22.0</version>
+  <version>1.0.0</version>
   <scope>test</scope>
 </dependency>
 ```
@@ -166,7 +166,7 @@ and add the following content into your `camunda.cfg.xml`:
        xsi:schemaLocation="http://www.springframework.org/schema/beans   http://www.springframework.org/schema/beans/spring-beans.xsd">
 
   <bean id="processEngineConfiguration"
-        class="org.camunda.community.process_test_coverage.engine.platform7.ProcessCoverageInMemProcessEngineConfiguration">
+        class="org.cibseven.community.process_test_coverage.engine.platform7.ProcessCoverageInMemProcessEngineConfiguration">
     <property name="history" value="full"/>
   </bean>
 </beans>

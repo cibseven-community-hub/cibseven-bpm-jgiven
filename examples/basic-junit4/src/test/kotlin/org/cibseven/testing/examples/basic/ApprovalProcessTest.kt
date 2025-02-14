@@ -11,7 +11,7 @@ import io.toolisticon.testing.jgiven.WHEN
 import org.cibseven.bpm.engine.test.Deployment
 import org.cibseven.bpm.engine.test.ProcessEngineRule
 import org.cibseven.bpm.engine.variable.Variables.putValue
-import org.camunda.community.process_test_coverage.junit4.platform7.rules.TestCoverageProcessEngineRuleBuilder
+import org.cibseven.community.process_test_coverage.junit4.platform7.rules.TestCoverageProcessEngineRuleBuilder
 import org.junit.ClassRule
 import org.junit.Rule
 import org.junit.Test

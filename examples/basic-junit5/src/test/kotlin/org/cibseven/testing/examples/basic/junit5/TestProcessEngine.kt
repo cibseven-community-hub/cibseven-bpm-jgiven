@@ -10,8 +10,8 @@ import org.cibseven.bpm.engine.impl.cfg.StandaloneInMemProcessEngineConfiguratio
 import org.cibseven.bpm.engine.impl.history.HistoryLevel
 import org.cibseven.bpm.engine.test.junit5.ProcessEngineExtension
 import org.cibseven.bpm.engine.test.mock.MockExpressionManager
-import org.camunda.community.process_test_coverage.engine.platform7.ProcessCoverageConfigurator
-import org.camunda.community.process_test_coverage.junit5.platform7.ProcessEngineCoverageExtension
+import org.cibseven.community.process_test_coverage.engine.platform7.ProcessCoverageConfigurator
+import org.cibseven.community.process_test_coverage.junit5.platform7.ProcessEngineCoverageExtension
 import java.util.*
 import java.util.function.Consumer
 import java.util.stream.Collectors
