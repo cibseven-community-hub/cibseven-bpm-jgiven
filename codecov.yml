@@ -1,2 +1,2 @@
 fixes:
-  - "io/holunda/testing/camunda-bpm-jgiven/::src/main/kotlin/"
+  - "org/cibseven/community/testing/cibseven-bpm-jgiven/::src/main/kotlin/"

@@ -29,7 +29,6 @@
     <dependency>
       <groupId>org.cibseven.community.mockito</groupId>
       <artifactId>cibseven-mockito</artifactId>
-      <version>${cibseven-mockito.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>

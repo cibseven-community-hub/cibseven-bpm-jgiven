@@ -18,8 +18,8 @@ import org.cibseven.bpm.engine.test.assertions.bpmn.BpmnAwareTests.externalTask
 import org.cibseven.bpm.engine.test.mock.Mocks
 import org.cibseven.bpm.engine.variable.Variables
 import org.cibseven.bpm.engine.variable.Variables.putValue
-import org.camunda.community.mockito.DelegateExpressions.getJavaDelegateMock
-import org.camunda.community.mockito.DelegateExpressions.registerJavaDelegateMock
+import org.cibseven.community.mockito.DelegateExpressions.getJavaDelegateMock
+import org.cibseven.community.mockito.DelegateExpressions.registerJavaDelegateMock
 
 /**
  * Process stage.
