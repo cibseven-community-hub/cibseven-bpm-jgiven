@@ -16,7 +16,7 @@
 
   <name>${project.artifactId}</name>
   <description>CIB seven BPM JGiven</description>
-  <url>https://github.com/cibseven-commuinty-hub/cibseven-bpm-jgiven/</url>
+  <url>https://github.com/cibseven-community-hub/cibseven-bpm-jgiven/</url>
 
 
   <properties>
@@ -403,9 +403,9 @@
   </licenses>
 
   <scm>
-    <connection>scm:git:git@github.com:cibseven-commuinty-hub/cibseven-bpm-jgiven.git</connection>
-    <url>scm:git:git@github.com:cibseven-commuinty-hub/cibseven-bpm-jgiven.git</url>
-    <developerConnection>scm:git:git@github.com:cibseven-commuinty-hub/cibseven-bpm-jgiven.git</developerConnection>
+    <connection>scm:git:git@github.com:cibseven-community-hub/cibseven-bpm-jgiven.git</connection>
+    <url>scm:git:git@github.com:cibseven-community-hub/cibseven-bpm-jgiven.git</url>
+    <developerConnection>scm:git:git@github.com:cibseven-community-hub/cibseven-bpm-jgiven.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
 
