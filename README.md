@@ -1,12 +1,8 @@
-# Camunda BPM JGiven
-Camunda specific stages and scenarios for the BDD testing tool JGiven written in Kotlin.
+# CIB seven BPM JGiven
+CIB seven specific stages and scenarios for the BDD testing tool JGiven written in Kotlin.
 
 [![stable](https://img.shields.io/badge/lifecycle-STABLE-green.svg)](https://github.com/holisticon#open-source-lifecycle)
-[![Camunda 7.22](https://img.shields.io/badge/Camunda%20Version-7.22-orange.svg)]([https://github.com/holisticon#open-source-lifecycle](https://docs.camunda.org/manual/7.22/))
-[![Development braches](https://github.com/holunda-io/camunda-bpm-jgiven/workflows/Development%20braches/badge.svg)](https://github.com/holunda-io/camunda-bpm-jgiven/workflows) 
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.holunda.testing/camunda-bpm-jgiven/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.holunda.testing/camunda-bpm-jgiven)
-
-[![Project Stats](https://www.openhub.net/p/camunda-bpm-jgiven/widgets/project_thin_badge.gif)](https://www.openhub.net/p/camunda-bpm-jgiven)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.cibseven.community/cibseven-bpm-jgiven/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.cibseven.community/cibseven-bpm-jgiven)
 
 ## Motivation
 
@@ -27,9 +23,9 @@ Add the following dependency to your Maven pom:
 
 ```xml
 <dependency>
-  <groupId>io.holunda.testing</groupId>
-  <artifactId>camunda-bpm-jgiven</artifactId>
-  <version>1.22.0</version>
+  <groupId>org.cibseven.community</groupId>
+  <artifactId>cibseven-bpm-jgiven</artifactId>
+  <version>1.0.0</version>
   <scope>test</scope>
 </dependency>
 ```
@@ -170,7 +166,7 @@ and add the following content into your `camunda.cfg.xml`:
        xsi:schemaLocation="http://www.springframework.org/schema/beans   http://www.springframework.org/schema/beans/spring-beans.xsd">
 
   <bean id="processEngineConfiguration"
-        class="org.camunda.community.process_test_coverage.engine.platform7.ProcessCoverageInMemProcessEngineConfiguration">
+        class="org.cibseven.community.process_test_coverage.engine.platform7.ProcessCoverageInMemProcessEngineConfiguration">
     <property name="history" value="full"/>
   </bean>
 </beans>

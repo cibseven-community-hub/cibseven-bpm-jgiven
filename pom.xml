@@ -3,19 +3,24 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>io.holunda.testing</groupId>
-  <artifactId>camunda-bpm-jgiven-parent</artifactId>
-  <version>2.0.1-SNAPSHOT</version>
+  <parent>
+     <groupId>org.cibseven.community</groupId>
+     <artifactId>release-parent</artifactId>
+     <version>1.0.0</version>
+     <relativePath />
+  </parent>
+
+  <artifactId>cibseven-bpm-jgiven-parent</artifactId>
+  <version>1.0.0</version>
   <packaging>pom</packaging>
 
-
   <name>${project.artifactId}</name>
-  <description>Camunda BPM JGiven</description>
-  <url>https://github.com/holunda-io/camunda-bpm-jgiven/</url>
+  <description>CIB seven BPM JGiven</description>
+  <url>https://github.com/cibseven-community-hub/cibseven-bpm-jgiven/</url>
 
 
   <properties>
-    <camunda.version>7.22.0</camunda.version>
+    <cibseven.version>1.1.0</cibseven.version>
     <jgiven.version>2.0.1</jgiven.version>
     <assertj.version>3.27.3</assertj.version>
     <jgiven-kotlin.version>2.0.1.0</jgiven-kotlin.version>
@@ -66,19 +71,19 @@
         <version>${jgiven-kotlin.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-engine</artifactId>
-        <version>${camunda.version}</version>
+        <groupId>org.cibseven.bpm</groupId>
+        <artifactId>cibseven-engine</artifactId>
+        <version>${cibseven.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-bpm-assert</artifactId>
-        <version>${camunda.version}</version>
+        <groupId>org.cibseven.bpm</groupId>
+        <artifactId>cibseven-bpm-assert</artifactId>
+        <version>${cibseven.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-bpm-junit5</artifactId>
-        <version>${camunda.version}</version>
+        <groupId>org.cibseven.bpm</groupId>
+        <artifactId>cibseven-bpm-junit5</artifactId>
+        <version>${cibseven.version}</version>
       </dependency>
 
     </dependencies>
@@ -88,18 +93,22 @@
     <dependency>
       <groupId>org.jetbrains.kotlin</groupId>
       <artifactId>kotlin-stdlib</artifactId>
+      <version>${kotlin.version}</version>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.kotlin</groupId>
       <artifactId>kotlin-reflect</artifactId>
+      <version>${kotlin.version}</version>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.kotlin</groupId>
       <artifactId>kotlin-stdlib-jdk8</artifactId>
+      <version>${kotlin.version}</version>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.kotlin</groupId>
       <artifactId>kotlin-test</artifactId>
+      <version>${kotlin.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -240,7 +249,7 @@
             </compilerPlugins>
             <pluginOptions>
               <!-- Each annotation is placed on its own line -->
-              <option>all-open:annotation=io.holunda.camunda.bpm.extension.jgiven.JGivenProcessStage</option>
+              <option>all-open:annotation=org.cibseven.community.bpm.extension.jgiven.JGivenProcessStage</option>
             </pluginOptions>
           </configuration>
           <executions>
@@ -354,58 +363,6 @@
           </executions>
         </plugin>
 
-        <!-- To sign the artifacts -->
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-gpg-plugin</artifactId>
-          <version>3.2.7</version>
-          <configuration>
-            <gpgArguments>
-              <arg>--batch</arg>
-              <arg>--yes</arg>
-              <arg>--pinentry-mode</arg>
-              <arg>loopback</arg>
-            </gpgArguments>
-          </configuration>
-          <executions>
-            <execution>
-              <id>sign-artifacts</id>
-              <phase>verify</phase>
-              <goals>
-                <goal>sign</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
-
-        <!-- Deploy -->
-        <plugin>
-          <artifactId>maven-deploy-plugin</artifactId>
-          <version>3.1.3</version>
-          <configuration>
-            <skip>true</skip>
-          </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.sonatype.plugins</groupId>
-          <artifactId>nexus-staging-maven-plugin</artifactId>
-          <version>1.7.0</version>
-          <executions>
-            <execution>
-              <id>default-deploy</id>
-              <phase>deploy</phase>
-              <goals>
-                <goal>deploy</goal>
-              </goals>
-              <configuration>
-                <serverId>ossrh</serverId>
-                <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                <autoReleaseAfterClose>true</autoReleaseAfterClose>
-              </configuration>
-            </execution>
-          </executions>
-        </plugin>
-
         <!-- Install -->
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
@@ -424,41 +381,6 @@
   </build>
 
   <profiles>
-    <!--
-    Profile creating all artifacts: JARs, POMs, Sources, JavaDoc and all signatures.
-    -->
-    <profile>
-      <id>release</id>
-      <activation>
-        <property>
-          <name>release</name>
-        </property>
-      </activation>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.jetbrains.dokka</groupId>
-            <artifactId>dokka-maven-plugin</artifactId>
-          </plugin>
-          <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>build-helper-maven-plugin</artifactId>
-          </plugin>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-source-plugin</artifactId>
-          </plugin>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-gpg-plugin</artifactId>
-          </plugin>
-          <plugin>
-            <groupId>org.sonatype.plugins</groupId>
-            <artifactId>nexus-staging-maven-plugin</artifactId>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
 
     <profile>
       <id>examples</id>
@@ -481,26 +403,11 @@
   </licenses>
 
   <scm>
-    <connection>scm:git:git@github.com:holunda-io/camunda-bpm-jgiven.git</connection>
-    <url>scm:git:git@github.com:holunda-io/camunda-bpm-jgiven.git</url>
-    <developerConnection>scm:git:git@github.com:holunda-io/camunda-bpm-jgiven.git</developerConnection>
+    <connection>scm:git:git@github.com:cibseven-community-hub/cibseven-bpm-jgiven.git</connection>
+    <url>scm:git:git@github.com:cibseven-community-hub/cibseven-bpm-jgiven.git</url>
+    <developerConnection>scm:git:git@github.com:cibseven-community-hub/cibseven-bpm-jgiven.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
-
-  <distributionManagement>
-    <site>
-      <id>README</id>
-      <url>https://github.com/holunda-io/camunda-bpm-jgiven</url>
-    </site>
-    <snapshotRepository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-    <repository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
-  </distributionManagement>
 
   <pluginRepositories>
     <!-- required for Dokka (Kotlin javadoc) -->
