@@ -121,12 +121,12 @@ pipeline {
                     withMaven(options: []) {
                         sh "mvn -T4 -U clean deploy"
                     }
-                  
+
                     junit allowEmptyResults: true, testResults: ConstantsInternal.MAVEN_TEST_RESULTS
                 }
             }
         }
-        
+
         stage('Deploy to Maven Central') {
             when {
                 allOf {
@@ -139,7 +139,7 @@ pipeline {
                     withMaven(options: []) {
                         withCredentials([file(credentialsId: 'credential-cibseven-community-gpg-private-key', variable: 'GPG_KEY_FILE'), string(credentialsId: 'credential-cibseven-community-gpg-passphrase', variable: 'GPG_KEY_PASS')]) {
                             sh "gpg --batch --import ${GPG_KEY_FILE}"
-    
+
                             def GPG_KEYNAME = sh(script: "gpg --list-keys --with-colons | grep pub | cut -d: -f5", returnStdout: true).trim()
 
                             sh """
@@ -147,7 +147,8 @@ pipeline {
                                     -Dgpg.keyname="${GPG_KEYNAME}" \
                                     -Dgpg.passphrase="${GPG_KEY_PASS}" \
                                     clean deploy \
-                                    -Psonatype-oss-release \
+                                    -Psonatype-oss-release,release \
+                                    -DskipExamples \
                                     -Dskip.cibseven.release="${!params.DEPLOY_TO_ARTIFACTS}"
                             """
                         }
