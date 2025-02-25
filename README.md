@@ -186,18 +186,3 @@ This library is developed under
 
 [![Apache 2.0 License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](/LICENSE)
 
-
-## Contribution
-
-We use gitflow for development. If you want to contribute, start and create
-an issue. Then fork the repository, create a feature branch and provide a 
-pull-request against `develop`.
-
-If you have permissions to release, make sure all branches are fetched and run: 
-
-     ./mvnw gitflow:release-start 
-     ./mvnw gitflow:release-finish
-     
-from cli. This will update the poms of `develop` and `master` branches 
-and start GitHub actions producing a new release.
-
