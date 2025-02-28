@@ -444,5 +444,12 @@
     </developer>
   </developers>
 
+  <repositories>
+    <repository>
+      <id>mvn-cibseven-public</id>
+      <name>CIB seven Public Repository</name>
+      <url>https://artifacts.cibseven.org/repository/public</url>
+    </repository>
+  </repositories>
 
 </project>
