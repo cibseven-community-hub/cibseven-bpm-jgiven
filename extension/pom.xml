@@ -12,15 +12,10 @@
   <artifactId>cibseven-bpm-jgiven</artifactId>
   <packaging>jar</packaging>
 
-  <name>${project.artifactId}</name>
-  <description>CIB seven BPM JGiven</description>
-  <url>https://github.com/cibseven-community-hub/cibseven-bpm-jgiven/</url>
-
   <dependencies>
     <dependency>
       <groupId>io.toolisticon.testing</groupId>
       <artifactId>jgiven-kotlin</artifactId>
-      <version>${jgiven-kotlin.version}</version>
     </dependency>
 
     <dependency>
@@ -33,62 +28,18 @@
     <dependency>
       <groupId>org.cibseven.bpm</groupId>
       <artifactId>cibseven-engine</artifactId>
-      <version>${cibseven.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.assertj</groupId>
       <artifactId>assertj-core</artifactId>
-      <version>${assertj.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.cibseven.bpm</groupId>
       <artifactId>cibseven-bpm-assert</artifactId>
-      <version>${cibseven.version}</version>
       <scope>provided</scope>
     </dependency>
 
   </dependencies>
-
-  <licenses>
-    <license>
-      <name>Apache License, Version 2.0</name>
-      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
-
-  <scm>
-    <connection>scm:git:git@github.com:cibseven-community-hub/cibseven-bpm-jgiven.git</connection>
-    <url>scm:git:git@github.com:cibseven-community-hub/cibseven-bpm-jgiven.git</url>
-    <developerConnection>scm:git:git@github.com:cibseven-community-hub/cibseven-bpm-jgiven.git</developerConnection>
-    <tag>HEAD</tag>
-  </scm>
-
-  <developers>
-    <developer>
-      <id>cibseven.org</id>
-      <name>CIB seven Community</name>
-      <email>community@cibseven.org</email>
-      <url>http://cibseven.org</url>
-      <organization>cibseven.org</organization>
-      <organizationUrl>http://cibseven.org</organizationUrl>
-    </developer>
-    <developer>
-      <id>zambrovski</id>
-      <name>Simon Zambrovski</name>
-      <email>simon.zambrovski@holisticon.de</email>
-      <organization>Holisticon AG</organization>
-      <organizationUrl>https://www.holisticon.de</organizationUrl>
-    </developer>
-    <developer>
-      <id>jangalinski</id>
-      <name>Jan Galinski</name>
-      <email>jan.galinski@holisticon.de</email>
-      <organization>Holisticon AG</organization>
-      <organizationUrl>https://www.holisticon.de</organizationUrl>
-    </developer>
-  </developers>
-
 </project>
