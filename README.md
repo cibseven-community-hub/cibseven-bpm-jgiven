@@ -1,8 +1,8 @@
 # CIB seven BPM JGiven
 CIB seven specific stages and scenarios for the BDD testing tool JGiven written in Kotlin.
 
-[![stable](https://img.shields.io/badge/lifecycle-STABLE-green.svg)](https://github.com/holisticon#open-source-lifecycle)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.cibseven.community/cibseven-bpm-jgiven/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.cibseven.community/cibseven-bpm-jgiven)
+[![CIB seven 1.1.0](https://img.shields.io/badge/CIB%20seven-1.1.0-orange.svg)](https://docs.cibseven.org/manual/1.1/)
+[![Maven Central](https://img.shields.io/maven-central/v/org.cibseven.community/cibseven-bpm-jgiven?label=Maven%20Central)](https://central.sonatype.com/artifact/org.cibseven.community/cibseven-bpm-jgiven)
 
 ## Motivation
 
