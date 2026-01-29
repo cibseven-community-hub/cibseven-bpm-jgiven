@@ -12,6 +12,10 @@
   <artifactId>cibseven-bpm-jgiven</artifactId>
   <packaging>jar</packaging>
 
+  <name>CIB seven BPM JGiven</name>
+  <description>JGiven BPM testing library for CIB seven process engine</description>
+  <url>https://github.com/cibseven-community-hub/cibseven-bpm-jgiven/</url>
+
   <dependencies>
     <dependency>
       <groupId>io.toolisticon.testing</groupId>
