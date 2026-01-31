@@ -1,7 +1,7 @@
 # CIB seven BPM JGiven
 CIB seven specific stages and scenarios for the BDD testing tool JGiven written in Kotlin.
 
-[![CIB seven 2.0.0](https://img.shields.io/badge/CIB%20seven-2.0.0-orange.svg)](https://docs.cibseven.org/manual/2.0/)
+[![CIB seven 2.1.0](https://img.shields.io/badge/CIB%20seven-2.1.0-orange.svg)](https://docs.cibseven.org/manual/2.1/)
 [![Maven Central](https://img.shields.io/maven-central/v/org.cibseven.community/cibseven-bpm-jgiven?label=Maven%20Central)](https://central.sonatype.com/artifact/org.cibseven.community/cibseven-bpm-jgiven)
 
 ## Motivation
@@ -25,7 +25,7 @@ Add the following dependency to your Maven pom:
 <dependency>
   <groupId>org.cibseven.community</groupId>
   <artifactId>cibseven-bpm-jgiven</artifactId>
-  <version>2.0.0</version>
+  <version>2.1.0</version>
   <scope>test</scope>
 </dependency>
 ```
@@ -104,43 +104,6 @@ class ApprovalProcessActionStage : ProcessStage<ApprovalProcessActionStage, Appr
 }
 ```
 
-### JUnit4
-
-```kotlin
-@Deployment(resources = [ApprovalProcessBean.RESOURCE])
-open class ApprovalProcessTest : ScenarioTest<ApprovalProcessActionStage, ApprovalProcessActionStage, ApprovalProcessThenStage>() {
-
-    @get: Rule 
-    val rule: ProcessEngineRule = StandaloneInMemoryTestConfiguration().rule()
-
-    @ScenarioState
-    val camunda = rule.processEngine
-
-    @Test
-    fun`should automatically approve`() {
-
-        val approvalRequestId = UUID.randomUUID().toString()
-
-        GIVEN
-            .process_is_deployed(ApprovalProcessBean.KEY)
-            .AND
-            .process_is_started_for_request(approvalRequestId)
-            .AND
-            .approval_strategy_can_be_applied(Expressions.ApprovalStrategy.AUTOMATIC)
-            .AND
-            .automatic_approval_returns(Expressions.ApprovalDecision.APPROVE)
-
-        WHEN
-            .process_continues()
-
-        THEN
-            .process_is_finished()
-            .AND
-            .process_has_passed(Elements.SERVICE_AUTO_APPROVE, Elements.END_APPROVED)
-
-    }
-}
-```
 
 If you want to collect process test coverage during the test run, make sure to replace your rule declaration by the following: 
 
