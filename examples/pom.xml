@@ -14,8 +14,8 @@
 
   <properties>
     <spring-boot.version>3.5.6</spring-boot.version>
-    <cibseven-process-test-coverage.version>2.1.0</cibseven-process-test-coverage.version>
-    <cibseven-mockito.version>2.1.0</cibseven-mockito.version>
+    <cibseven-process-test-coverage.version>2.2.0-SNAPSHOT</cibseven-process-test-coverage.version>
+    <cibseven-mockito.version>2.2.0-SNAPSHOT</cibseven-mockito.version>
     <junit.version>4.13.2</junit.version>
   </properties>
 
