@@ -75,7 +75,7 @@ pipeline {
                     def groupId = pom.groupId
                     if (groupId == null) {
                         groupId = pom.parent.groupId
-                        log.info "parent groupId is used"
+                        echo "parent groupId is used"
                     }
 
                     mavenProjectInformation = new MavenProjectInformation(groupId, pom.artifactId, pom.version, pom.name, pom.description)
