@@ -4,12 +4,10 @@
 
 import de.cib.pipeline.library.Constants
 import de.cib.pipeline.library.kubernetes.BuildPodCreator
-import de.cib.pipeline.library.logging.Logger
 import de.cib.pipeline.library.ConstantsInternal
 import de.cib.pipeline.library.MavenProjectInformation
 import groovy.transform.Field
 
-@Field Logger log = new Logger(this)
 @Field MavenProjectInformation mavenProjectInformation = null
 @Field Map pipelineParams = [
     pom: ConstantsInternal.DEFAULT_MAVEN_POM_PATH,
@@ -77,12 +75,12 @@ pipeline {
                     def groupId = pom.groupId
                     if (groupId == null) {
                         groupId = pom.parent.groupId
-                        log.info "parent groupId is used"
+                        echo "parent groupId is used"
                     }
 
                     mavenProjectInformation = new MavenProjectInformation(groupId, pom.artifactId, pom.version, pom.name, pom.description)
 
-                    log.info "Build Project: ${mavenProjectInformation.groupId}:${mavenProjectInformation.artifactId}, ${mavenProjectInformation.name} with version ${mavenProjectInformation.version}"
+                    echo "Build Project: ${mavenProjectInformation.groupId}:${mavenProjectInformation.artifactId}, ${mavenProjectInformation.name} with version ${mavenProjectInformation.version}"
 
                     // Avoid Git "dubious ownership" error in checked out repository. Needed in
                     // build containers with newer Git versions. Originates from Jenkins running
@@ -163,13 +161,13 @@ pipeline {
     post {
         always {
             script {
-                log.info 'End of the build'
+                echo 'End of the build'
             }
         }
 
         success {
             script {
-                log.info '✅ Build successful'
+                echo '✅ Build successful'
                 if (params.RELEASE_BUILD == true) {
                     notifyResult(
                         office365WebhookId: pipelineParams.office365WebhookId,
@@ -181,13 +179,13 @@ pipeline {
 
         unstable {
             script {
-                log.warning '⚠️ Build unstable'
+                echo '⚠️ Build unstable'
             }
         }
 
         failure {
             script {
-                log.warning '❌ Build failed'
+                echo '❌ Build failed'
                 if (env.BRANCH_NAME == 'master') {
                     notifyResult(
                         office365WebhookId: pipelineParams.office365WebhookId,
@@ -199,7 +197,7 @@ pipeline {
 
         fixed {
             script {
-                log.info '✅ Previous issues fixed'
+                echo '✅ Previous issues fixed'
                 if (env.BRANCH_NAME == 'master') {
                     notifyResult(
                         office365WebhookId: pipelineParams.office365WebhookId,
