@@ -13,9 +13,9 @@
   <packaging>pom</packaging>
 
   <properties>
-    <spring-boot.version>3.5.6</spring-boot.version>
+    <spring-boot.version>4.0.6</spring-boot.version>
     <cibseven-process-test-coverage.version>2.2.0-SNAPSHOT</cibseven-process-test-coverage.version>
-    <cibseven-mockito.version>2.2.0-SNAPSHOT</cibseven-mockito.version>
+    <cibseven-mockito.version>2.2.0</cibseven-mockito.version>
     <junit.version>4.13.2</junit.version>
   </properties>
 
@@ -44,12 +44,12 @@
       </dependency>
       <dependency>
         <groupId>org.cibseven.bpm.springboot</groupId>
-        <artifactId>cibseven-bpm-spring-boot-starter-webapp</artifactId>
+        <artifactId>cibseven-bpm-spring-boot-starter-webapp-4</artifactId>
         <version>${cibseven.version}</version>
       </dependency>
       <dependency>
         <groupId>org.cibseven.bpm.springboot</groupId>
-        <artifactId>cibseven-bpm-spring-boot-starter-test</artifactId>
+        <artifactId>cibseven-bpm-spring-boot-starter-test-4</artifactId>
         <version>${cibseven.version}</version>
       </dependency>
       <dependency>

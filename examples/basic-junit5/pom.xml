@@ -15,7 +15,7 @@
   <dependencies>
     <dependency>
       <groupId>org.cibseven.bpm.springboot</groupId>
-      <artifactId>cibseven-bpm-spring-boot-starter-webapp</artifactId>
+      <artifactId>cibseven-bpm-spring-boot-starter-webapp-4</artifactId>
     </dependency>
     <dependency>
       <groupId>com.h2database</groupId>
@@ -37,7 +37,7 @@
     </dependency>
     <dependency>
       <groupId>org.cibseven.bpm.springboot</groupId>
-      <artifactId>cibseven-bpm-spring-boot-starter-test</artifactId>
+      <artifactId>cibseven-bpm-spring-boot-starter-test-4</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
